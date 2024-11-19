@@ -15,7 +15,7 @@ const AdminPage = () => {
         avatar: "",
     });
 
-    const apiBaseUrl = "https://gkiltdd.onrender.com/api/trips"; // Thay thế với API thật
+    const apiBaseUrl = "https://gkiltdd.onrender.com/api/trips";
 
     // Lấy danh sách trips từ API
     useEffect(() => {
@@ -62,7 +62,7 @@ const AdminPage = () => {
         try {
             if (selectedTrip) {
                 // Cập nhật trip
-                console.log("Cập nhật trip với dữ liệu:", formData); // Debug dữ liệu
+                console.log("Cập nhật trip với dữ liệu:", formData);
                 const response = await axios.put(`${apiBaseUrl}/${selectedTrip._id}`, formData);
 
                 if (response.status === 200) {
@@ -85,7 +85,7 @@ const AdminPage = () => {
                 if (response.status === 201) {
                     const newTrip = response.data;
                     console.log("Trip mới được tạo:", newTrip); // Kiểm tra trip mới tạo
-                    setTrips((prev) => [...prev, newTrip]); // Thêm trip mới vào state
+                    setTrips((prev) => [...prev, newTrip]);
                     handleCloseModal();
                 } else {
                     console.error("Lỗi khi thêm trip:", response.status);
