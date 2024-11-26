@@ -7,6 +7,7 @@ function App() {
         AdminPage / >
         <
         /div>
+
     );
 }
 
