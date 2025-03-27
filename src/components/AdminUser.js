@@ -13,7 +13,7 @@ const AdminUser = () => {
         role: "",
     });
 
-    const apiBaseUrl = "https://gkiltdd.onrender.com/api/users"; // Thay bằng URL API của bạn.
+    const apiBaseUrl = "https://gkiltdd.onrender.com/api/users";
 
     // Lấy danh sách users từ API
     useEffect(() => {
